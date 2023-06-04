@@ -1,5 +1,6 @@
 import React from 'react'
 import EntertainmenCardSlider from '../components/Entertainment/EntertainmenCard.component'
+import Premier from '../components/Premier/Premier.component'
 
 const HomePage = () => {
   return (
@@ -9,6 +10,7 @@ const HomePage = () => {
             The best of Entertainment
         </h1>
         <EntertainmenCardSlider/>
+        <Premier/>
       </div>
     </>
   )
