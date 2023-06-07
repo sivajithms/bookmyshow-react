@@ -8,6 +8,7 @@ module.exports = {
       colors: {
         navCol: 
         {
+          25: '#2B3148',
           50: '#edf1fc',
           100: '#d3d4e1',
           200: '#b6b8c9',
