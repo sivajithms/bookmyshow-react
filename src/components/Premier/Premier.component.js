@@ -5,7 +5,6 @@ import settings from "../../configs/PosterCarousal.config";
 import PremierImages from "../../configs/TempPosters.config";
 
 const Premier = (props) => {
-  console.log(props);
   return (
     <>
       <div className="flex flex-col items-start text-white">

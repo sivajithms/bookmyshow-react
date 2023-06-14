@@ -8,7 +8,7 @@ const EntertainmenCard = (props) => {
         <img
           className="w-full h-full rounded-xl"
           src={props.src}
-          alt="Entertainment Image"
+          alt="Entertainment img"
         />
       </div>
     </>
