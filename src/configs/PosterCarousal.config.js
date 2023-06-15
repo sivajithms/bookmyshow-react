@@ -1,7 +1,7 @@
 const settings = {
   infinite: true,
   autoplay: false,
-  slidesToShow: 5,
+  slidesToShow: 7,
   slidesToScroll: 2,
   InitialSlide: 0,
   arrows: true,

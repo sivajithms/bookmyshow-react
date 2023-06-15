@@ -38,6 +38,7 @@ const MovieHero = () => {
                   Shang-Chi and the Legend of the Ten Rings
               </h1>
             </div>
+           
           </div>
         </div>
 

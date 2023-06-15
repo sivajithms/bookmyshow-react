@@ -46,10 +46,10 @@ const HeroCarousal = () => {
     <>
       <div className="lg:hidden overflow-hidden">
         <HeroSlider {...settings}>
-          {images.map((image) => {
+          {images.map((image,index) => {
             return (
-              <div className="w-full h-64 md:h-80 py-3">
-                <img src={`https://image.tmdb.org/t/p/original${image.backdrop_path}`} alt="test" className="h-full w-full rounded-md" />
+              <div className="w-full h-64 md:h-80 py-3" key={index}>
+                <img src={`https://image.tmdb.org/t/p/original${image.poster_path}`} alt="test" className="h-full w-full rounded-md" />
               </div>
             );
           })}
@@ -57,9 +57,9 @@ const HeroCarousal = () => {
       </div>
       <div className="hidden lg:block overflow-hidden">
         <HeroSlider {...settingsLg}>
-          {images.map((image) => {
+          {images.map((image,index) => {
             return (
-              <div className="w-full h-96 px-2 py-3">
+              <div className="w-full h-96 px-2 py-3" key={index}>
                 <img src={`https://image.tmdb.org/t/p/original${image.backdrop_path}`} alt="test" className="h-full w-full rounded-md" />
               </div>
             );
