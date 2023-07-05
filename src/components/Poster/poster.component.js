@@ -1,7 +1,6 @@
 import React from "react";
 
 const Poster = (props) => {
-  console.log(props);
   return (
     <>
       {<div className="flex flex-col items-start gap-2 px-3">

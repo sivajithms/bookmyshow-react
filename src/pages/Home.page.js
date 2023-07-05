@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
 import EntertainmentCardSlider from "../components/Entertainment/EntertainmenCard.component";
-import Premier from "../components/Premier/Premier.component.js";
+// import Premier from "../components/Premier/Premier.component.js";
 import PosterSlider from "../components/PosterSlider/PosterSlider.component";
 import TempPosters from "../configs/TempPosters.config";
 

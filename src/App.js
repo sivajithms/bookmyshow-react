@@ -10,12 +10,12 @@ axios.defaults.baseURL = 'https://api.themoviedb.org/3';
 axios.defaults.params = {}
 axios.defaults.params["api_key"] = process.env.REACT_APP_API_KEY
 
-function App() { 
+function App() {
   return (
     <>
-    <DefaultHOC  path='/' exact component={HomePage}/>
-    <DefaultHOC  path='/plays' exact component={Plays}/>
-    <MovieHOC path = '/movie/:id' exact component={MoviePage}/>
+      <DefaultHOC path='/' exact component={HomePage} />
+      <DefaultHOC path='/plays' exact component={Plays} />
+      <MovieHOC path='/movie/:id' exact component={MoviePage} />
     </>
   );
 }
