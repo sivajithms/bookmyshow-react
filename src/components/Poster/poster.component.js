@@ -3,8 +3,8 @@ import React from "react";
 const Poster = (props) => {
   return (
     <>
-      {<div className="flex flex-col items-start gap-2 px-3">
-        <div className="h-80">
+      {<div className="flex flex-col items-start gap-2 px-3 cursor-pointer">
+        <div className="h-80 ">
           <img
             src={`https://image.tmdb.org/t/p/original${props.poster_path}`}
             alt={props.title}

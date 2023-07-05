@@ -1,22 +1,41 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
 import EntertainmentCardSlider from "../components/Entertainment/EntertainmenCard.component";
-// import Premier from "../components/Premier/Premier.component.js";
 import PosterSlider from "../components/PosterSlider/PosterSlider.component";
-import TempPosters from "../configs/TempPosters.config";
+// import Premier from "../components/Premier/Premier.component.js";
+// import TempPosters from "../configs/TempPosters.config";
 
 const HomePage = () => {
   const [popularMovies, setPopularMovies] = useState([]);
+  const [actionMovies, setActionMovies] = useState([]);
+  const [topRatedMovies, setTopRatedMovies] = useState([]);
 
-  useEffect(() => {
+  useEffect(() => {   
     const requestPopularMovies = async () => {
       const getPopularMovies = await axios.get("/movie/popular");
       setPopularMovies(getPopularMovies.data.results);
     };
+
+    const requestActionMovies = async () => {
+        const response = await axios.get('/discover/movie', {
+          params: {
+            with_genres: 28 // Filter by action genre (genre ID for action is 28)
+          }
+        }); 
+        setActionMovies(response.data.results)
+    };
+
+    const requestTopratedMovies = async () => {
+      const response = await axios.get("/movie/top_rated");
+        setTopRatedMovies(response.data.results)
+    };
+
     requestPopularMovies();
+    requestActionMovies();
+    requestTopratedMovies();
   }, []);
 
-  console.log({ popularMovies });
+  console.log({ actionMovies });
 
   return (
     <>
@@ -48,16 +67,16 @@ const HomePage = () => {
 
       <div className="container mx-auto px-4">
         <PosterSlider
-          images={TempPosters}
-          title="Online Streaming Events"
+          images={actionMovies}
+          title="Action Movies"
           isDark={false}
         />
       </div>
 
       <div className="container mx-auto px-4">
         <PosterSlider
-          images={TempPosters}
-          title="Outdoor Events"
+          images={topRatedMovies}
+          title="Top Rated"
           isDark={false}
         />
       </div>
