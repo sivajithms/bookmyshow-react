@@ -35,8 +35,6 @@ const HomePage = () => {
     requestTopratedMovies();
   }, []);
 
-  console.log({ actionMovies });
-
   return (
     <>
       <div className="flex flex-col gap-10">
