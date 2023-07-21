@@ -19,8 +19,13 @@ const MovieLayout = (props) => {
     const requestMovie =async ()=>{
            const getMovieData = await axios.get(`/movie/${id}`)
           setMovie(getMovieData.data)
+          console.log(movie);
     }
-    requestMovie()
+    requestMovie();
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth', // Optional: adds smooth scrolling animation
+    });
   },[id])
 
   return (
